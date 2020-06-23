@@ -6,6 +6,7 @@ import DialogsContainer from "./components/Dialogs/DialogsContainer";
 import { BrowserRouter, Route } from "react-router-dom";
 import UsersContainer from "./components/Users/UsersContainer";
 import HeaderContainer from "./components/Header/HeaderContainer";
+import Login from "./components/Login/Login";
 
 const App = (props) => {
   
@@ -31,7 +32,7 @@ const App = (props) => {
                 />
               )}
             />
-            <Route
+          <Route
             path="/users"
             render={() => (
               <UsersContainer
@@ -39,6 +40,16 @@ const App = (props) => {
               />
             )}
           />
+
+          <Route
+            path="/login"
+            render={() => (
+              <Login
+                store={props.store}
+              />
+            )}
+          />
+
         </div>
       </div>
     </BrowserRouter>
