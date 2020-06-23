@@ -29,3 +29,4 @@ export const authAPI = {
        return instance.get(`auth/me`)
     }
 }
+
